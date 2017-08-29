@@ -1,0 +1,3 @@
+# map
+No cénario que escolhi, utilizei uma classe de conexão com um banco de dados mysql onde antes de aplicarmos o padrão singleton de fato o código é bem mais simples mas propenso a error e conexões indevidas. Aplicando o padrão Singpleton, garantimos que haverá apenas uma instância na aplicação.
+Para conexão ao banco de dados aplicar o padrão Singleton não seria a melhor solução, visto que podemos utilizar outros padrões. 
