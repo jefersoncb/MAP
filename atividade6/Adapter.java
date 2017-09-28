@@ -1,13 +1,13 @@
 interface Imagem
 {
-    void carregar();
-    void desenhar();
+    public void carregar();
+    public void desenhar();
 }
 
 interface ImagemTarget
 {
-    void carregarImagem();
-    void desenharImagem();
+	public void carregarImagem(Imagem imagem);
+	public void desenharImagem(Imagem imagem);
 }
     
 public class ImagemAdapter implements ImagemTarget
@@ -64,8 +64,9 @@ public class ImagemBMP implements Imagem
 
 public static void main(String []args)
 {
-	Imagem imagem = new ImagemBMP();
-    ImagemTarget img = new ImagemAdapter(imagem);
-    imagem.carregarImagem();
-	img.desenharImagem();
+    ImagemAdapter img = new ImagemAdapter();
+    Imagem imgPng = new ImagemPNG();
+	Imagem imgJpeg = new ImagemJpeg();
+	img.desenharImagem(imgPng);
+	img.desenharImagem(imgJpeg);
 }
