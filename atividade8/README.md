@@ -1,0 +1,4 @@
+# Atividade 8
+Pontos Positivos: Permite a criação de uma hierarquia de classes do tipo Strategy em um mesmo contexto, acontece o encapsulamento dos algoritmos nas classes Strategy o que permite variar o algoritmo independentemente do seu contexto, tornando mais fácil de efetuar possíveis alterações no código, as classes Strategy podem fornecer diferentes implementações do mesmo comportamento.  O cliente pode escolher entre as estratégias aquela que mais lhe favorece.
+
+Pontos Negativos: Custo entre a comunicação Strategy e Context: as classes que implementam a interface Strategy podem não utilizar as informações passadas por ela, ou seja, pode acontecer da classe Context criar e iniciar parâmetros que não serão utilizados, maior número de objetos.
